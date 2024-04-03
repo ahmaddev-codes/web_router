@@ -1,0 +1,85 @@
+:root {
+    --primary-color: #ff0303;
+    --gray: #cccccc;
+    --secondary-color: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Product Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main .container img {
+    width: 200px;
+    height: auto;
+}
+
+.main .container form {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 300px;
+}
+
+.main .container form input {
+    position: relative;
+    width: 60%;
+    border: 1px solid var(--gray);
+    border-radius: 50px 0 0 50px;
+    padding: 15px 50px;
+    font-size: medium;
+    font-family: 'Product Sans', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.main .container form input:active {
+    border: 1px solid var(--gray);
+}
+
+.main .container form img {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    opacity: 0.6;
+    z-index: 1;
+    transform: translateY(0) translateX(70%);
+}
+
+.main .container form .button {
+    position: relative;
+    width: 10%;
+    border: 1px solid var(--primary-color);
+    border-radius: 0 50px 50px 0;
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: medium;
+    font-family: 'Product Sans', sans-serif;
+    padding: 15px;
+    cursor: pointer;
+}
